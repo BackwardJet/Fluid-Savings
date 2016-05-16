@@ -1,3 +1,9 @@
 # Open vim files #
 ##################
 *.swp
+
+# OSX System Files #
+####################
+.DS_Store
+.AppleDouble
+.LSOverride
