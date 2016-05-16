@@ -27,7 +27,7 @@
                                 <rect key="frame" x="281" y="465" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="zFv-0T-nxS" kind="show" id="3P2-XN-sCg"/>
+                                    <segue destination="zFv-0T-nxS" kind="presentation" id="qFv-PH-Ieq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-dr-d9o">
