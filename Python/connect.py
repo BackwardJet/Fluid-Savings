@@ -13,11 +13,31 @@ class Database:
 		print ("Connection Sucess")
 
 	def printAllUsers(self):
-		c = self.connection.cursor() 		
-		c.execute('SELECT * FROM ' + self.tableNameUsage)
+		c = self.connection.cursor()
+		query = 'SELECT * FROM ' + self.tableNameUsage		
+		c.execute(query)
 		for row in c.fetchall():
 			print(row[0])
 
-database = Database(login_user,login_password)
-database.printAllUsers()
+	def UpdateUsage(self,username,amount):
+		cursor = self.connection.cursor()
+		query = ("UPDATE " + str(self.tableNameUsage) + " SET waterusage = " + str(amount) +  " WHERE username = '" + str(username)+"'")
+		#data = (amount,username)
+		print(query)
+		#cursor.execute(query,data)
+		cursor.execute(query)
+		self.connection.commit()
+		cursor.close()
+	
+	def printAllUsersUsage(self):
+		c = self.connection.cursor()
+		query = 'SELECT * FROM ' + self.tableNameUsage
+		c.execute(query)
+		for row in c.fetchall():
+			print(row)
 
+database = Database(login_user,login_password)
+database.printAllUsersUsage()
+database.UpdateUsage("tejvuligonda@gmail.com",250)
+#database.UpdateUsage("test",2)
+database.printAllUsersUsage()
