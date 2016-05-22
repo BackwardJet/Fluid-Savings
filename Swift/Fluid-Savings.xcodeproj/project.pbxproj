@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB08CC7D1CF22A0500D73303 /* ProtectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08CC7C1CF22A0500D73303 /* ProtectedViewController.swift */; };
+		FB08CC7F1CF23CF500D73303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08CC7E1CF23CF500D73303 /* RegisterViewController.swift */; };
 		FBE509841CBADB13001D6853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE509831CBADB13001D6853 /* AppDelegate.swift */; };
 		FBE509861CBADB13001D6853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE509851CBADB13001D6853 /* ViewController.swift */; };
 		FBE509891CBADB13001D6853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE509871CBADB13001D6853 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB08CC7C1CF22A0500D73303 /* ProtectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtectedViewController.swift; sourceTree = "<group>"; };
+		FB08CC7E1CF23CF500D73303 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FBE509801CBADB13001D6853 /* Fluid-Savings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluid-Savings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE509831CBADB13001D6853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE509851CBADB13001D6853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		FBE509821CBADB13001D6853 /* Fluid-Savings */ = {
 			isa = PBXGroup;
 			children = (
+				FB08CC7C1CF22A0500D73303 /* ProtectedViewController.swift */,
+				FB08CC7E1CF23CF500D73303 /* RegisterViewController.swift */,
 				FBE509831CBADB13001D6853 /* AppDelegate.swift */,
 				FBE509851CBADB13001D6853 /* ViewController.swift */,
 				FBE509871CBADB13001D6853 /* Main.storyboard */,
@@ -138,6 +144,8 @@
 			files = (
 				FBE509861CBADB13001D6853 /* ViewController.swift in Sources */,
 				FBE509841CBADB13001D6853 /* AppDelegate.swift in Sources */,
+				FB08CC7D1CF22A0500D73303 /* ProtectedViewController.swift in Sources */,
+				FB08CC7F1CF23CF500D73303 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

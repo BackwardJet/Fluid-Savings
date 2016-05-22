@@ -27,7 +27,7 @@
                                 <rect key="frame" x="281" y="465" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="zFv-0T-nxS" kind="presentation" id="qFv-PH-Ieq"/>
+                                    <segue destination="Mlw-Wq-9rf" kind="presentation" id="bod-Tf-pbN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-dr-d9o">
@@ -95,7 +95,7 @@
                                 <rect key="frame" x="149" y="280" width="302" height="30"/>
                                 <state key="normal" title="Don't have an account? Tap here to register."/>
                                 <connections>
-                                    <segue destination="5hr-SS-zLa" kind="show" id="jdj-lE-Kny"/>
+                                    <segue destination="5hr-SS-zLa" kind="presentation" identifier="fromLoginToRegister" id="pMJ-zw-XZF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="793" y="386"/>
         </scene>
-        <!--View Controller-->
+        <!--Protected View Controller-->
         <scene sceneID="kg4-QZ-5hv">
             <objects>
-                <viewController id="Mlw-Wq-9rf" sceneMemberID="viewController">
+                <viewController id="Mlw-Wq-9rf" customClass="ProtectedViewController" customModule="Fluid_Savings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hv1-sT-u7v"/>
                         <viewControllerLayoutGuide type="bottom" id="lEa-ef-IXV"/>
@@ -139,15 +139,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q0N-jE-ZAC"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="zFv-0T-nxS" kind="presentation" identifier="fromProtectedToLogin" id="rMe-pT-WWa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQA-n2-zGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="386"/>
+            <point key="canvasLocation" x="1434" y="386"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="UDN-HX-WAb">
             <objects>
-                <viewController id="5hr-SS-zLa" sceneMemberID="viewController">
+                <viewController id="5hr-SS-zLa" customClass="RegisterViewController" customModule="Fluid_Savings" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iOT-lW-dpI"/>
                         <viewControllerLayoutGuide type="bottom" id="NzB-T2-bdr"/>
@@ -189,12 +194,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-rC-w1t">
                                 <rect key="frame" x="272" y="252" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonClicked:" destination="5hr-SS-zLa" eventType="touchUpInside" id="kpe-Q5-EjO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syf-Tz-kig">
                                 <rect key="frame" x="151" y="314" width="299" height="30"/>
                                 <state key="normal" title="Already have an account? Tap here to login."/>
                                 <connections>
-                                    <segue destination="zFv-0T-nxS" kind="show" id="Koa-W3-WU6"/>
+                                    <segue destination="zFv-0T-nxS" kind="presentation" identifier="fromRegisterToLogin" id="yxz-cD-GBR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -216,14 +224,38 @@
                             <constraint firstItem="syf-Tz-kig" firstAttribute="centerX" secondItem="0I1-Kw-mQo" secondAttribute="centerX" id="xNj-ir-aa8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="registerEmail" destination="vfn-X8-7ic" id="FAi-MI-9M3"/>
+                        <outlet property="registerPassword" destination="Cbv-61-BBb" id="9f2-gE-dHQ"/>
+                        <outlet property="registerPasswordRepeat" destination="yBT-UZ-1N4" id="sLO-Nl-WOk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y35-Sj-amu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="1100"/>
+            <point key="canvasLocation" x="793" y="1092"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="znL-Fa-EDF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fs1-2B-AB3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljm-zf-3zp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mlw-Wq-9rf" kind="relationship" relationship="rootViewController" id="6hr-il-yjp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emm-Cb-Qk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122" y="386"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jdj-lE-Kny"/>
-        <segue reference="Koa-W3-WU6"/>
+        <segue reference="yxz-cD-GBR"/>
+        <segue reference="WBi-9S-DwX"/>
+        <segue reference="bod-Tf-pbN"/>
     </inferredMetricsTieBreakers>
 </document>
